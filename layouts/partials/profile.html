@@ -11,7 +11,7 @@
   <h2 class="title">{{ . }}</h2>
   {{- end }}
   {{- with .bio -}}
-  <span class="bio">{{ . | markdownify }}</span>
+  <span class="bio">{{ . | emojify | markdownify }}</span>
   {{- end }}
 </section>
 {{- end }}
