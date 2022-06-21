@@ -1,8 +1,6 @@
 {{ with .Site.Params.footer -}}
 <footer class="footer">
-  {{ with .copyright -}}
-  <p class="copyright">{{ . | markdownify }}</p>
-  {{- end }}
+  <p class="copyright">{{ .copyright | markdownify }} | <a href="{{ .privacyPolicyLink | safeURL }}">Privacy Policy</a></p>
   {{ if or ( not ( isset . "poweredby" ) ) ( .poweredby ) -}}
   <p class="powered-by">Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/posquit0/hugo-awesome-identity">Awesome Identity</a>.</p>
   {{- end }}
